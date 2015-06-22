@@ -1,0 +1,65 @@
+Script started on Mon 14 Apr 2014 11:25:31 PM EDT
+hkim142@matrix:~/oop344/Workshop/w9> exitwhoami
+hkim142
+hkim142@matrix:~/oop344/Workshop/w9> whoamiexit[Kwhoamiexit[Kg++ -o w9 w9.cppcat w9.cpp limits.h 
+/*
+OOP344 WINTER 2014
+Workshop 09
+w9.cpp
+Hyungi Kim
+025 741 125*/
+#include <iostream>
+#include <stdio.h>
+#include "limits.h"
+using namespace std;
+void displayBits(unsigned x);
+
+int main(void) {
+
+	displayBits(0);
+	displayBits(1);
+	displayBits(-1);
+	displayBits(2000000000);
+	displayBits(-2000000000);
+	
+	return 0;
+}
+
+void displayBits(unsigned x) {
+	unsigned int mask = (1 << (CHAR_BIT - 1));
+	int counter = 0;
+
+	while (mask > 0) {
+		counter++;
+		if ((x & mask) == 0)
+			cout << "0";
+		else
+			cout << "1";
+		if ((counter % 8) == 0)
+
+			cout << " ";
+		mask = mask >> 1;
+	}
+	cout << endl;
+}
+/*
+OOP344 WINTER 2014
+Workshop 09
+limits.h
+Hyungi Kim
+025 741 125*/
+#define CHAR_BIT 32
+
+
+
+hkim142@matrix:~/oop344/Workshop/w9> cat w9.cpp limits.h whoami[Kexit[Kwhoamiexit[Kg++ -o w9 w9.cpp
+hkim142@matrix:~/oop344/Workshop/w9> w9
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000001 
+11111111 11111111 11111111 11111111 
+01110111 00110101 10010100 00000000 
+10001000 11001010 01101100 00000000 
+hkim142@matrix:~/oop344/Workshop/w9> exit
+exit
+
+Script done on Mon 14 Apr 2014 11:25:52 PM EDT
